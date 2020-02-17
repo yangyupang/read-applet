@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="bg">
+        <view class="flex top">
+            <view class="directory">目录</view>
+            <view class="pack" bind:tap="pack">收起</view>
+        </view>
+        <view wx:for="{{directoryList}}" class="title" wx:key="index"  bind:tap="clickItem" data-item="{{item}}" data-index="{{index}}">{{item.title}}</view>
+    </view>
+</view>

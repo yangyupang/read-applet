@@ -1,0 +1,26 @@
+<!-- pages/reading/reading.wxml -->
+<import src="../../wxParse/wxParse.wxml" />
+<!-- import  from '../../wxParse/wxParse.wxml' -->
+<view class="bg {{bgColor === 0? 'bg-0' :''}} {{bgColor === 1 ?'bg-1' :''}} {{bgColor === 2 ?'bg-2' :''}} {{bgColor === 3 ?'bg-3' :''}} {{bgColor === 4 ?'bg-4' :''}}">
+    <view class="title">{{firstDirectory.title}}</view>
+    <view style="padding: 20rpx;text-indent: 2em" class="{{fontSize === 8 ? 'font-46': ''}} {{fontSize === 7 ? 'font-44': ''}} {{fontSize === 6 ? 'font-42': ''}} {{fontSize === 5 ? 'font-40': ''}} {{fontSize === 4 ? 'font-38': ''}} {{fontSize === 3 ? 'font-36': ''}} {{fontSize === 2 ? 'font-34': ''}} {{fontSize === 1 ? 'font-32': ''}} {{fontSize === 0 ? 'font-30': ''}}" bind:tap="set">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="flex j-center">
+        <view class="up" bind:tap="up">上一章</view>
+        <view class="down" bind:tap="down">下一章</view>
+    </view>
+    <view wx:if="{{isShowSet}}" class="flex t-center" style="position: fixed;bottom: 0;width: 100%;background-color: #181818;color: #fff;">
+        <view class="f-1 pad" bind:tap="showDirectory">目录</view>
+        <view class="f-1 pad" bind:tap="subtract">Aa-</view>
+        <view class="f-1 pad" bind:tap="add">Aa+</view>
+        <view class="f-1 pad" bind:tap="changeBg" wx:if="{{!isChange}}">背景</view>
+        <view class="f-1 pad close-change" bind:tap="closeChangeBg" wx:if="{{isChange}}">背景</view>
+    </view>
+    <view class="flex p-absolute bg-box" wx:if="{{isChange}}">
+        <view>换肤：</view>
+        <view wx:for="{{changeBg}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="changeItem" class="box {{index === 0 ? 'bg-0' :''}} {{index === 1 ?'bg-1' :''}} {{index === 2 ?'bg-2' :''}} {{index === 3 ?'bg-3' :''}} {{index === 4 ?'bg-4' :''}} {{bgColor === index ? 'bg-0-size' :''}} {{bgColor === index ? 'bg-1-size' :''}} {{bgColor === index ? 'bg-2-size' :''}} {{bgColor === index ? 'bg-3-size' :''}} {{bgColor === index ? 'bg-4-size' :''}}"></view>
+    </view>
+</view>
+<view class="shade" bind:tap='closeSet' wx:if="{{isShowSet}}"></view>
+<directory directoryList="{{directoryList}}" sid="{{id}}" title="{{title}}" bind:showDirectory='showDirectory' wx:if="{{isShowDir}}"></directory>

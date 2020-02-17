@@ -1,0 +1,13 @@
+<view>
+    <view class="flex f-wrap ">
+        <view class="box t-center" wx:for="{{List}}" data-title="{{title}}"  data-item='{{item}}' wx:key="index" bind:tap="chooseItem">
+           <view class="name">
+               {{item.name}}
+           </view>
+            <view class="bookCount">
+                {{item.bookCount}}本
+            </view>
+        </view> 
+    </view>
+</view>
+  

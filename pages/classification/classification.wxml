@@ -1,0 +1,18 @@
+<!-- pages/classification/classification.wxml -->
+<!-- 分类 -->
+<view>
+    <view class="flex bor-bot">
+        <view class="type-style {{activeIndex === index ?'f-colo':''}}" wx:for="{{typeList}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bind:tap="typeItem">
+            {{item.name}}
+        </view>
+    </view>
+    <scroll-view scroll-x class="flex bor-bot w-space" wx:if="{{CorrectList.length >0}}">
+        <view class="type-style inline-b {{CorrectListIndex === index ?'f-colo':''}}" wx:for="{{CorrectList}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bind:tap="CorrectListItem">
+            {{item}}
+        </view>
+    </scroll-view>
+    <view class="container">
+        <view class="t-center" wx:if="{{booksList.length === 0}}">抱歉主人~还没有这类资源！</view>
+        <bookRack booksList="{{booksList}}" id='bookRack' bind:newLimit='newLimit'></bookRack>
+    </view>
+</view>

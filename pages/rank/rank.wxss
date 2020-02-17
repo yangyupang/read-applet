@@ -1,0 +1,26 @@
+/* pages/rank/rank.wxss */
+
+.container {
+    padding: 20rpx;
+}
+
+.bg {
+    background-color: #F7F7F7;
+}
+
+.font-siz {
+    padding: 20rpx 0;
+    font-size: 36rpx;
+}
+
+.font-colo {
+    color: #EC304C;
+}
+
+.red-line {
+    width: 22%;
+    height: 6rpx;
+    background-color: #EC304C;
+    bottom: 0rpx;
+    left: 38%;
+}

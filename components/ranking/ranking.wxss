@@ -1,0 +1,23 @@
+/* components/ranking/ranking.wxss */
+
+.ranking-box {
+    margin: 0 0 0 20rpx;
+    border-bottom: 4rpx solid #EEEEEE;
+    padding: 20rpx 0;
+}
+
+.ranking-img {
+    width: 75rpx;
+    height: 75rpx;
+    line-height: 104rpx;
+}
+
+.img-size {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.title {
+    font-size: 34rpx;
+    margin-left: 20rpx;
+}

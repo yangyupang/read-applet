@@ -1,0 +1,40 @@
+<!-- index.wxml -->
+<view class="container ">
+  <view class="boox-top flex j-between">
+    <!-- 管理书架的书 -->
+    <view class="management-left t-center" bind:tap="management" wx:if="{{!isShow}}">
+      <image class="img-size" src="../../assets/images/management.png" />
+    </view>
+    <view class="management-left t-center" bind:tap="complete" wx:if="{{isShow}}">
+      <image class="img-size" src="../../assets/images/complete.png" />
+    </view>
+    <view class="management-right flex j-between">
+      <view class="hlep t-center" bind:tap="helps">帮助</view>
+      <view class="right-img t-center" bind:tap="refresh">
+        <image class="img-size" src="../../assets/images/refresh.png" />
+      </view>
+    </view>
+  </view>
+  <view class="t-center no-boox" wx:if="{{bookrackList.length === 0}}">主人还没收藏书籍哟~快去书城看看吧！</view>
+  <view class="flex collect f-wrap" wx:if="{{!isShow}}">
+    <view class="collect-box" bind:tap="goTo" wx:for="{{bookrackList}}" wx:key="index" data-item="{{item}}">
+      <view class="collect-img">
+        <image class="collectImg-size" src="{{statics}}{{item.cover}}" />
+      </view>
+      <view class="collect-title">{{item.title}}</view>
+      <view class="collect-chapter">读到{{item.chapter}}章</view>
+    </view>
+  </view>
+  <view class="flex collect f-wrap" wx:if="{{isShow}}">
+    <view class="collect-box p-relative" wx:for="{{bookrackList}}" wx:key="index" data-item='{{item}}'>
+      <view class="p-absolute closeImg" bind:tap="delBookrack" data-title='{{item.title}}'>
+        <image class="closeImg-size" src="../../assets/images/close3.png" />
+      </view>
+      <view class="collect-img jitter">
+        <image class="collectImg-size" src="{{statics}}{{item.cover}}" />
+      </view>
+      <view class="collect-title">{{item.title}}</view>
+      <view class="collect-chapter">读到{{item.chapter}}章</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!-- pages/home/home.wxml -->
+<view class="">
+    <view class="flex bgcolor">
+        <view class="f-1 classification-ranking t-center p-relative" wx:for="{{classificationRanking}}" wx:key="index" bind:tap="chooseItem" data-item='{{item}}' data-index='{{index}}'>
+            <view class="{{activeIndex === index ? 'font-col':''}}">{{item}}</view>
+            <view class="p-absolute line" wx:if="{{activeIndex === index}}"></view>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex === 0}}">
+        <view class="classify-name">男生</view>
+        <ninePalace List="{{maleList}}"  title="male"></ninePalace>
+        <view class="classify-name">女生</view>
+        <ninePalace List="{{femaleList}}"  title="female"></ninePalace>
+        <view class="classify-name">出版</view>
+        <ninePalace List="{{pressList}}"  title="press"></ninePalace>
+    </view>
+    <view wx:if="{{activeIndex === 1}}">
+        <view class="classify-name">男生</view>
+        <ranking rankingList="{{rankMaleList}}"></ranking>
+        <view class="classify-name">女生</view>
+        <ranking rankingList="{{rankFemaleList}}"></ranking>
+    </view>
+</view>

@@ -1,0 +1,259 @@
+.bg-color {
+    background-color: #F7F7F7;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.top-red {
+    height: 132rpx;
+    background-color: #CB1C36;
+}
+
+.top-white {
+    height: 394rpx;
+    /* overflow: hidden; */
+    background-color: white;
+    border-bottom: 2rpx solid rgb(219, 217, 217);
+}
+
+.book-img {
+    width: 262rpx;
+    height: 347rpx;
+    top: -118rpx;
+    left: 240rpx;
+    box-shadow: 2rpx 10rpx 12rpx #C3C3C3;
+}
+
+.img-size {
+    width: 262rpx;
+    height: 347rpx;
+}
+
+.book-title {
+    top: 240rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+}
+
+.book-author {
+    top: 250rpx;
+    font-size: 32rpx;
+    color: rgb(219, 217, 217);
+}
+
+.btn {
+    bottom: -36rpx;
+    width: 570rpx;
+    font-size: 32rpx;
+    left: 90rpx;
+}
+
+.reading {
+    padding: 20rpx 60rpx;
+    color: #fff;
+    background-color: #EC304C;
+    border-radius: 46rpx;
+}
+
+.is-collection {
+    padding: 20rpx 60rpx;
+    background-color: white;
+    border: 2rpx solid rgb(219, 217, 217);
+    border-radius: 46rpx;
+}
+
+.stars-size {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 14rpx;
+}
+
+.stars-pos {
+    top: 80rpx;
+}
+
+.chapter-pos {
+    font-size: 30rpx;
+    top: 86rpx;
+}
+
+.chapter-col {
+    color: #53E0D1;
+}
+
+.details-comments {
+    background-color: white;
+    /* height: 824rpx; */
+    /* height: 443rpx; */
+    margin: 128rpx auto 0rpx;
+    width: 670rpx;
+}
+
+.bott-line {
+    border-bottom: 2rpx solid rgb(219, 217, 217);
+}
+
+.newList-ranking {
+    padding: 20rpx 0;
+    font-size: 34rpx;
+}
+
+.font-col {
+    color: #EC304C;
+}
+
+.line {
+    width: 14%;
+    height: 6rpx;
+    background-color: #EC304C;
+    bottom: 0rpx;
+    left: 144rpx;
+}
+
+.details-container,
+.comments-container {}
+
+.chapter {
+    margin: 30rpx;
+    background-color: #F7F7F7;
+    font-size: 32rpx;
+}
+
+.abstract {
+    font-size: 30rpx;
+    color: #4B4B4B;
+    line-height: 44rpx;
+    padding: 30rpx;
+}
+
+.chapter-img {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 14rpx 0;
+}
+
+.chapter-num {
+    margin: 14rpx 0;
+}
+
+.changes,
+.show-books {
+    padding: 30rpx;
+}
+
+.others {
+    font-size: 32rpx;
+}
+
+.change-img {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+}
+
+.change-name {
+    font-size: 32rpx;
+    color: #f46f46;
+}
+
+.recommended-img {
+    width: 186rpx;
+    height: 270rpx;
+}
+
+.recommended-title {
+    font-size: 30rpx;
+}
+
+.comments {
+    padding: 30rpx;
+}
+
+.comments-img {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.comments-nickname {
+    font-size: 32rpx;
+    color: #FFA190;
+}
+
+.comments-content {
+    font-size: 30rpx;
+    line-height: 44rpx;
+    margin-top: 10rpx;
+}
+
+
+/*遮罩层 */
+
+.bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.7;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+}
+
+.show {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 14%;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+
+.big-img {
+    width: 594rpx;
+    height: 99%;
+}
+
+.save {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    z-index: 1003;
+    background-color: rgb(219, 217, 217);
+}
+
+.determine {
+    padding: 30rpx;
+    background-color: white;
+}
+
+.cancel {
+    padding: 30rpx;
+    background-color: white;
+    margin-top: 26rpx;
+}
+
+.indexFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+scroll-view {
+    /* height: 443rpx; */
+    height: 500rpx;
+    /* overflow: hidden; */
+}

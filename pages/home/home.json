@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "ninePalace": "../../components/ninePalace/ninePalace",
+        "ranking": "../../components/ranking/ranking"
+    },
+    "navigationBarTitleText": "书城"
+}

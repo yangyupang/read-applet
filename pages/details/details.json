@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "directory": "../../components/directory/directory"
+    },
+    "navigationBarTitleText": "详情"
+}

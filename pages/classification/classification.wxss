@@ -1,0 +1,19 @@
+/* pages/classification/classification.wxss */
+
+.bor-bot {
+    border-bottom: 2rpx solid #EEEEEE;
+    height: 78.8rpx;
+}
+
+.f-colo {
+    color: #DC6879;
+}
+
+.type-style {
+    padding: 20rpx;
+    font-size: 32rpx;
+}
+
+.container {
+    padding: 20rpx;
+}

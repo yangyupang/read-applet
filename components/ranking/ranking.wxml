@@ -1,0 +1,12 @@
+<!-- components/ranking/ranking.wxml -->
+<view>
+    <view class="flex ranking-box t-center a-center" wx:for="{{rankingList}}" data-item='{{item}}' wx:key="index" bind:tap="chooseItem">
+        <view class="ranking-img" hover-class="none" hover-stop-propagation="false">
+            <image class="img-size" wx:if="{{(index ===0 || index===1 || index===2)}}" src="../../assets/images/hot.png" />
+            <image class="img-size" wx:if="{{index === 3}}" src="../../assets/images/good.png" />
+            <image class="img-size" wx:if="{{index === 4}}" src="../../assets/images/smile.png" />
+            <image class="img-size" wx:if="{{index === 5}}" src="../../assets/images/pen.png" />
+        </view>
+        <view class="title">{{item.title}}</view>
+    </view>
+</view>

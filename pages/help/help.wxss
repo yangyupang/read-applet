@@ -1,0 +1,23 @@
+.container {
+    padding: 20rpx;
+}
+
+.questions-statements {
+    font-size: 44rpx;
+    font-weight: 600;
+    margin-bottom: 20rpx;
+}
+
+.a-box {
+    font-size: 32rpx;
+    color: #66667D;
+    margin: 20rpx 0;
+    padding: 20rpx 0;
+    line-height: 52rpx;
+    text-indent: 2em;
+}
+
+.line {
+    border-top: 2rpx solid #F7F7F7;
+    border-bottom: 2rpx solid #F7F7F7;
+}

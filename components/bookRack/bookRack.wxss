@@ -1,0 +1,56 @@
+/* components/bookRack/bookRack.wxss */
+
+.book-item {
+    padding: 50rpx 0;
+    border-bottom: 2rpx solid #F0F0F0;
+}
+
+.book-img {
+    margin-right: 34rpx;
+}
+
+.img-size {
+    width: 192rpx;
+    height: 276rpx;
+}
+
+.book-title {
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.book-author,
+.book-shortIntro {
+    font-size: 32rpx;
+    color: #999999;
+    margin: 20rpx 0;
+}
+
+.book-latelyFollower {
+    font-size: 32rpx;
+    color: #FF8771;
+}
+
+.f-style {
+    font-size: 30rpx;
+    color: #fff;
+    padding: 4rpx 20rpx;
+    margin-right: 20rpx;
+    border-radius: 16rpx;
+}
+
+.f-back {
+    background-color: #FF8C00;
+}
+
+.s-back {
+    background-color: #00CED1;
+}
+
+.t-back {
+    background-color: #FF4500;
+}
+
+.disappear {
+    display: none;
+}

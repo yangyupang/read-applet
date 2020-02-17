@@ -1,0 +1,19 @@
+/* components/ninePalace/ninePalace.wxss */
+
+.box {
+    width: 33%;
+    border: 2rpx solid #F7F7F7;
+    border-left: none;
+    height: 116rpx;
+}
+
+.name {
+    font-size: 34rpx;
+    font-weight: 600;
+    margin: 10rpx 0;
+}
+
+.bookCount {
+    font-size: 30rpx;
+    color: #999999;
+}

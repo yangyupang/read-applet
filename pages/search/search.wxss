@@ -1,0 +1,91 @@
+.container {
+    padding: 20rpx;
+}
+
+.search {
+    background-color: #EFEFEF;
+    margin-top: 20rpx;
+    height: 76rpx;
+    border-radius: 28rpx;
+}
+
+.change,
+.delete {
+    z-index: 4;
+}
+
+.search-img,
+.close-img,
+.change-img {
+    width: 75rpx;
+    height: 75rpx;
+    line-height: 88rpx;
+    left: 140rpx;
+}
+
+.change-img,
+.delete-img {
+    width: 75rpx;
+    height: 75rpx;
+    line-height: 88rpx;
+}
+
+.change-title,
+.delete-title {
+    color: #f46f46;
+}
+
+.close-img {
+    left: 638rpx !important;
+    z-index: 4;
+}
+
+.img-size {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.search-input {
+    height: 76rpx;
+    line-height: 76rpx;
+}
+
+.hotWords-item {
+    padding: 10rpx 20rpx;
+    font-size: 32rpx;
+    margin: 10rpx;
+    color: #fff;
+}
+
+.col-p {
+    background-color: #FFC0CB;
+}
+
+.col-b {
+    background-color: #7B68EE;
+}
+
+.col-pd {
+    background-color: #FF69B4;
+}
+
+.col-g {
+    background-color: #66CDAA;
+}
+
+.col-o {
+    background-color: #FA8072;
+}
+
+.col-gd {
+    background-color: #228B22;
+}
+
+.history-item {
+    font-size: 30rpx;
+    margin: 20rpx 20rpx 20rpx 0;
+}
+
+.line {
+    border-bottom: 2rpx solid #F7F7F7;
+}

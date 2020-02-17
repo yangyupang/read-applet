@@ -1,0 +1,91 @@
+<view class="bg-color {{isShow ?'indexFixed':''}}">
+    <view class="top-red"></view>
+    <view class="top-white p-relative">
+        <view class="p-absolute book-img" bind:tap="showView">
+            <image class="img-size" src="{{statics}}{{bookInfo.cover}}" />
+        </view>
+        <view class="book-title t-center clear p-relative">{{bookInfo.title}}</view>
+        <view class="book-author t-center clear p-relative">{{bookInfo.author}}</view>
+        <view class="flex p-absolute btn j-between">
+            <view class="reading" bind:tap="reading">开始阅读</view>
+            <view class="is-collection">
+                <text class="join" bind:tap="join" wx:if="{{!isCollection}}">加入书架</text>
+                <text class="remove" bind:tap="remove" wx:if="{{isCollection}}">已加入书架</text>
+            </view>
+        </view>
+    </view>
+    <!-- 评分 -->
+    <view class="t-center p-relative stars-pos">
+        <block wx:for="{{haveStars}}" wx:key="index">
+            <image class="inline-b stars-size" src='../../assets/images/stars.png'></image>
+        </block>
+        <block wx:for="{{noStars}}" wx:key="index">
+            <image class="inline-b stars-size" src='../../assets/images/hollow.png'></image>
+        </block>
+    </view>
+    <!-- 更新到到哪儿了 -->
+    <view class="t-center p-relative chapter-pos">
+        <view>
+            更新至
+            <text class="chapter-col">{{bookInfo.lastChapter}}</text>
+        </view>
+    </view>
+    <view class="details-comments">
+        <view class="flex bott-line">
+            <view class="f-1 newList-ranking t-center p-relative" wx:for="{{newList}}" wx:key="index" bind:tap="chooseItem" data-item='{{item}}' data-index='{{index}}'>
+                <view class="{{activeIndex === index ? 'font-col':''}}">{{item}}</view>
+                <view class="p-absolute line" wx:if="{{activeIndex === index}}"></view>
+            </view>
+        </view>
+        <!-- 装详情的 -->
+        <view class="details-container">
+            <scroll-view scroll-y wx:if="{{activeIndex === 0}}">
+                <view class="abstract">简介：{{bookInfo.longIntro}}</view>
+                <view class="chapter flex j-center" bind:tap="showDirectory">
+                    <image class="chapter-img" src="../../assets/images/chapter.png" />
+                    <view class="chapter-num">总目录({{bookInfo.chaptersCount}}章)</view>
+                </view>
+                <view class="flex j-between changes">
+                    <view class="others">看过这本书的人还在看</view>
+                    <view class="flex" bind:tap="changeBooks">
+                        <image class="change-img" src="../../assets/images/refresh-red.png" />
+                        <view class="change-name">换一换</view>
+                    </view>
+                </view>
+                <view class="show-books flex j-between">
+                    <view style="width: 186rpx;height: 270rpx;" wx:for="{{showBooks}}" wx:key="index" data-item="{{item}}" bind:tap="goTo">
+                        <image class="recommended-img" src="{{statics}}{{item.cover}}" />
+                        <view class="t-center recommended-title">{{item.title}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <!-- 装评论的 -->
+        <view class="comments-container">
+            <scroll-view scroll-y wx:if="{{activeIndex === 1}}">
+                <view class="comments flex" wx:for="{{shortReviews}}" wx:key="index">
+                    <view style="margin-right: 30rpx;">
+                        <image class="comments-img" wx:if="{{item.author.activityAvatar !== ''}}" src="{{statics}}{{item.author.activityAvatar}}" />
+                        <image class="comments-img" src="../../assets/images/no-img.png" wx:if="{{item.author.activityAvatar === ''}}" />
+                    </view>
+                    <view class="">
+                        <view class="comments-nickname">{{item.author.nickname}}</view>
+                        <view class="comments-content">{{item.content}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<!-- 遮罩层 -->
+<view class="bg" bind:tap='hideView' style='display:{{display}}'></view>
+<view class="show" bind:longtap="isSave" style='display:{{display}}'>
+    <image class="big-img" src="{{statics}}{{bookInfo.cover}}" />
+</view>
+<view class="save" style='display:{{displaies}}'>
+    <view class="determine t-center" bind:tap="determine">保存到本地</view>
+    <view class="cancel t-center" bind:tap="cancel">取消</view>
+</view>
+
+<directory directoryList="{{directoryList}}" sid="{{id}}" title="{{bookInfo.title}}"  bind:showDirectory='showDirectory' wx:if="{{isShowDir}}"></directory>
+  

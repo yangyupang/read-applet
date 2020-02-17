@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "bookRack": "../../components/bookRack/bookRack"
+    },
+    "navigationBarTitleText": "搜索"
+}

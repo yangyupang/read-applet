@@ -1,0 +1,13 @@
+<!-- pages/rank/rank.wxml -->
+<!-- 排行 -->
+<view class="flex bg " wx:if="{{yueBangId !==''}}">
+    <view class="f-1 t-center font-siz p-relative" wx:for="{{list}}" wx:key="index" data-index="{{index}}" bind:tap="clickItem">
+        <view class="{{activeIndex === index ?'font-colo':''}}">{{item}}</view>
+        <view class="red-line p-absolute" wx:if="{{activeIndex === index}}"></view>
+    </view>
+</view>
+<view class="container">
+    <bookRack booksList="{{booksList}}" wx:if="{{activeIndex === 0}}"></bookRack>
+    <bookRack booksList="{{booksList}}" wx:if="{{activeIndex === 1}}"></bookRack>
+    <bookRack booksList="{{booksList}}" wx:if="{{activeIndex === 2}}"></bookRack>
+</view>

@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/home/home",
+        "pages/search/search",
+        "pages/help/help",
+        "pages/details/details",
+        "pages/rank/rank",
+        "pages/classification/classification",
+        "pages/reading/reading"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#CB1C36",
+        "navigationBarTitleText": "米妮书屋",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#f46",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "书架",
+                "iconPath": "assets/images/book.png",
+                "selectedIconPath": "assets/images/book-selected.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text": "书城",
+                "iconPath": "assets/images/home.png",
+                "selectedIconPath": "assets/images/home-selected.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "assets/images/search.png",
+                "selectedIconPath": "assets/images/search-selected.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

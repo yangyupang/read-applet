@@ -1,0 +1,135 @@
+/* pages/reading/reading.wxss */
+
+@import "../../wxParse/wxParse.wxss";
+.title {
+    padding: 20rpx 0;
+    margin: 0 20rpx;
+    border-bottom: 0.5px solid #EEEEEE;
+    font-size: 46rpx;
+    font-weight: 600;
+}
+
+.WxEmojiView {
+    line-height: 72rpx
+}
+
+.up,
+.down {
+    background-color: #EC304C;
+    padding: 20rpx;
+    color: #fff;
+}
+
+.up {
+    border-radius: 40rpx 0 0 40rpx;
+    margin-right: 10rpx;
+}
+
+.down {
+    border-radius: 0 40rpx 40rpx 0;
+}
+
+.pad {
+    padding: 20rpx 0;
+}
+
+.close-change {
+    color: skyblue;
+}
+
+.shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+}
+
+.bg {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.bg-box {
+    padding: 20rpx;
+    bottom: 86rpx;
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+}
+
+.box {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.bg-0 {
+    background-color: white;
+}
+
+.bg-1 {
+    background-color: #E8DFCB
+}
+
+.bg-2 {
+    background-color: #E8EDE5
+}
+
+.bg-3 {
+    background-color: #A4A4A4
+}
+
+.bg-4 {
+    background-color: #D1EAD1
+}
+
+.bg-0-size,
+.bg-1-size,
+.bg-2-size,
+.bg-3-size,
+.bg-4-size {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.font-46 {
+    font-size: 46rpx;
+}
+
+.font-44 {
+    font-size: 44rpx;
+}
+
+.font-42 {
+    font-size: 42rpx;
+}
+
+.font-40 {
+    font-size: 40rpx;
+}
+
+.font-38 {
+    font-size: 38rpx;
+}
+
+.font-36 {
+    font-size: 36rpx;
+}
+
+.font-34 {
+    font-size: 34rpx;
+}
+
+.font-32 {
+    font-size: 32rpx;
+}
+
+.font-30 {
+    font-size: 30rpx;
+}

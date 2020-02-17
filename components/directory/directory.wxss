@@ -1,0 +1,42 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+.bg {
+    background-color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.directory {
+    font-size: 44rpx;
+    font-weight: 600;
+}
+
+.pack {
+    font-size: 32rpx;
+    padding: 9rpx 10rpx 9rpx 20rpx;
+    background-color: #DC5655;
+    color: #fff;
+    border-radius: 30rpx 0 0 30rpx;
+}
+
+.top {
+    padding: 40rpx 10rpx 20rpx 30rpx;
+}
+
+.title {
+    font-size: 34rpx;
+    margin: 20rpx 10rpx 20rpx 30rpx;
+    border-bottom: 4rpx solid #EEEEEE;
+    padding-bottom: 20rpx;
+}

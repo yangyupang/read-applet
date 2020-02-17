@@ -1,0 +1,27 @@
+/* pages/home/home.wxss */
+
+.bgcolor {
+    background-color: #F7F7F7;
+}
+
+.classification-ranking {
+    padding: 20rpx 0;
+}
+
+.font-col {
+    color: #EC304C;
+}
+
+.line {
+    width: 14%;
+    height: 6rpx;
+    background-color: #EC304C;
+    bottom: 0rpx;
+    left: 158rpx;
+}
+
+.classify-name {
+    padding: 30rpx 16rpx;
+    font-size: 36rpx;
+    color: #999999;
+}

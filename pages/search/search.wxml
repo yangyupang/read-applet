@@ -1,0 +1,51 @@
+<view class="container">
+    <!-- 输入框 -->
+    <view class="search p-relative">
+        <view class="search-img p-absolute t-center" wx:if="{{inputValue ===''}}">
+            <image class="img-size" src="../../assets/images/search.png" />
+        </view>
+        <view class="close-img p-absolute t-center" wx:if="{{inputValue !==''}}" bind:tap="clearInput">
+            <image class="img-size" src="../../assets/images/close.png" />
+        </view>
+        <input class="search-input t-center" bindinput="bindKeyInput" value="{{inputValue}}" bindconfirm="onSearch" confirm-type="search" type="text" placeholder="输入书名或作者名" />
+    </view>
+    <!-- 没有搜索时下面的内容 -->
+    <view wx:if="{{booksList.length === 0}}">
+        <!-- 大家都在搜 -->
+        <view>
+            <view class="flex j-between a-center">
+                <view class="others">大家都在搜</view>
+                <view class="flex change a-center t-center" bind:tap="change">
+                    <view class="change-img">
+                        <image class="img-size" src="../../assets/images/refresh-red.png" />
+                    </view>
+                    <view class="change-title">换一换</view>
+                </view>
+            </view>
+            <view class="flex f-wrap">
+                <view wx:for="{{hotWords}}" class="hotWords-item {{index === 0 ? 'col-p' : ''}} {{index === 1 ? 'col-b' : ''}} {{index === 2 ? 'col-pd' : ''}} {{index === 3 ? 'col-g' : ''}} {{index === 4 ? 'col-o' : ''}} {{index === 5 ? 'col-gd' : ''}}" wx:key="index" bind:tap='clickItem' data-item='{{item}}' data-index='{{index}}'>
+                    {{item}}
+                </view>
+            </view>
+        </view>
+        <!-- 历史记录 -->
+        <view wx:if="{{historyList.length >0}}">
+            <view class="flex j-between a-center">
+                <view class="history">搜索历史</view>
+                <view class="flex a-center t-center delete" bind:tap="delete">
+                    <view class="delete-img">
+                        <image class="img-size" src="../../assets/images/delete.png" />
+                    </view>
+                    <view class="delete-title">删除</view>
+                </view>
+            </view>
+            <view class="flex f-wrap line">
+                <view wx:for="{{historyList}}" class="history-item" wx:key="index" bind:tap='clickItem' data-item='{{item}}' data-index='{{index}}'>
+                    {{item}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- {{limit}} -->
+    <bookRack booksList="{{booksList}}" limit="{{limit}}" id='bookRack' bind:newLimit='newLimit' class="m-top"></bookRack>
+</view>

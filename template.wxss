@@ -1,0 +1,129 @@
+/**app.wxss**/
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+
+/* 解决塌陷 */
+
+.clear {
+    clear: both;
+}
+
+
+/* 行内块级元素 */
+
+.inline-b {
+    display: inline-block;
+}
+
+
+/* 盒子不换行 */
+
+.w-space {
+    white-space: nowrap;
+}
+
+
+/* 让盒子变成横向排列 */
+
+.flex {
+    display: flex;
+}
+
+
+/* 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行 */
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* 每一份盒子占一份 */
+
+.f-1 {
+    flex: 1;
+}
+
+
+/* 元素垂直排列 */
+
+.f-col {
+    flex-direction: column;
+}
+
+
+/* 首行缩进2个字符 */
+
+.t-indent {
+    text-indent: 2em;
+}
+
+
+/* 元素位于容器的中心。 */
+
+
+/* 弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。 */
+
+.a-center {
+    align-items: center;
+}
+
+.t-center {
+    text-align: center;
+}
+
+
+/* 项目位于容器的结尾。 */
+
+.j-end {
+    justify-content: flex-end;
+}
+
+
+/* 项目位于容器的中心。 */
+
+.j-center {
+    justify-content: center;
+}
+
+
+/* 项目位于各行之间留有空白的容器内。 */
+
+.j-between {
+    justify-content: space-between;
+}
+
+
+/* 项目位于各行之前、之间、之后都留有空白的容器内。 */
+
+.j-around {
+    justify-content: space-around;
+}
+
+
+/* 一行超出隐藏 */
+
+.o-h {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* 超出三行隐藏 */
+
+.m-h {
+    overflow: hidden;
+    /* 将元素设为盒子伸缩模型显示 */
+    display: -webkit-box;
+    /* 伸缩方向设为垂直方向 */
+    -webkit-box-orient: vertical;
+    /* 超出3行隐藏，并显示省略号 */
+    -webkit-line-clamp: 3;
+}

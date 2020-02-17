@@ -1,0 +1,26 @@
+<view wx:for="{{booksList}}" class="book-item" wx:key="index" bind:tap='clickItem' data-item='{{item}}' data-index='{{index}}'>
+    <view class="flex">
+        <view class="book-img">
+            <image class="img-size" src="{{statics}}{{item.cover}}"></image>
+        </view>
+        <view class="book-describe" >
+            <view class="book-title" >
+                {{item.title}}
+            </view>
+            <view class="book-author" >
+                {{item.author}}
+            </view>
+            <view class="book-shortIntro m-h" >
+                {{item.shortIntro}}
+            </view>
+            <view class="book-latelyFollower" wx:if="{{(item.sizetype === -1 && !item.tags)}}">
+                最近收藏:{{item.latelyFollower}}
+            </view>
+            <view class="book-tags flex" wx:if="{{item.tags}}">
+                <view class="f-style w-space o-h {{index1===0 ?'f-back':''}} {{index1===1 ?'s-back':''}} {{index1===2 ?'t-back':''}} {{index1 > 2 ? 'disappear':''}}" wx:for="{{item.tags}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+                    {{item1}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
